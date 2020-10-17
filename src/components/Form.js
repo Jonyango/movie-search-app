@@ -1,7 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
+import {MovieContext} from '../context/context'
 
 const InputForm = () => {
     const [movieTitle, setMovieTitle]=useState('');
+    const {fetchMovies}= useContext(MovieContext);
 
    const handleOnchange=(e)=>{
         setMovieTitle(e.target.value);
@@ -9,7 +11,7 @@ const InputForm = () => {
     }
     const handleOnSubmit=(e)=>{
         e.preventDefault();
-        console.log(movieTitle);
+        fetchMovies(movieTitle);
         setMovieTitle('');
     }
     return  <>
@@ -19,7 +21,7 @@ const InputForm = () => {
         type='query'
         value={movieTitle}
         onChange={handleOnchange}
-        placeholder='Search for a movie'
+        placeholder='e.g 3 Idiots'
         />
         <button className='search-button' type='submit'>Search</button>
     </form>
