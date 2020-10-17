@@ -31,6 +31,8 @@ small {
 	font-weight: 300;
 	font-family: 'Josefin Sans', serif;
 	color: #e6e0e0;
+	cursor: pointer;
+
 }
 
 .header {
@@ -162,6 +164,38 @@ small {
   color: #755959;
 }
 
-.ratings{
+.loading{
+	margin-top: 15px;
+	text-align: center;
+	color: white;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.upcoming-movie-grid{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:row ;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.upcoming-movie{
+	padding: 5px 25px 10px 25px;
+	max-width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.upcoming-movie-release-date{
+	font-weight: 900;
+	font-family: 'Josefin Sans', serif;
+	letter-spacing: 0.2;
+	color: #755959;
+
+
 
 }

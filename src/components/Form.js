@@ -22,6 +22,7 @@ const InputForm = () => {
         value={movieTitle}
         onChange={handleOnchange}
         placeholder='e.g 3 Idiots'
+        required
         />
         <button className='search-button' type='submit'>Search</button>
     </form>
