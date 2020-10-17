@@ -11,7 +11,7 @@ const MovieContextProvider = ({children}) => {
            let res = await fetch(`${process.env.REACT_APP_API_URL}query=${query}&page=1&include_adult=false`);
            let data = await res.json();
            setMovies(data.results);
-           console.log(data)
+           console.log(data.results)
 
        }catch(error){
            console.log(error);
